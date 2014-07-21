@@ -1,4 +1,22 @@
 <h1>World#index</h1>
 <p>Find me in app/views/world/index.html.erb</p>
+
+<table>
+  <tr>
+    <% @groups.each do |group| %>
+    <td><table><thead>
+      <tr><th><%= group.shift %></th></tr>
+      </thead>
+      <tbody>
+      <% group.each do |name| %>
+        <tr><td><%= name %></td></tr>
+      <% end %>
+    </tbody></table></td>
+    <% end %>
+  </tr>
+</table>
+
+<br>
+
 <%= link_to 'User list', '/users' %><br>
 <%= link_to 'Back to welcome page', '/' %>
