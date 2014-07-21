@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721035852) do
+ActiveRecord::Schema.define(version: 20140721083835) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "region_id"
   end
+
+  add_index "countries", ["region_id"], name: "index_countries_on_region_id"
 
   create_table "regions", force: true do |t|
     t.string   "name"

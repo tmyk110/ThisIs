@@ -4,6 +4,10 @@
   <strong>Name:</strong>
   <%= @country.name %>
 </p>
+<p>
+  <strong>Region:</strong>
+  <%= @country.region.name %>
+</p>
 
 <%= link_to 'Edit', edit_country_path(@country) %> |
 <%= link_to 'Back', countries_path %>
