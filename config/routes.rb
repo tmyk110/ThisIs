@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :auth_users
   resources :countries
 
   resources :regions
